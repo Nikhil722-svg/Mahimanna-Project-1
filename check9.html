@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #afeeee;
+        }
+
+        .container-1 {
+            display: flex;
+            background-color: #102030;
+
+        }
+
+        .container-2 {
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            width: 70px;
+            position: absolute;
+        }
+
+        .container-3 {
+            position: relative;
+            border: 2px solid #ffffff;
+            font-weight: bold;
+            width: 700px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 170px;
+            margin-top: 30px;
+            font-size: xx-large;
+            height: 35px;
+            border-radius: 50px;
+        }
+
+        .container-4 {
+            padding-top: 30px;
+            height: 40px;
+            padding-left: 820px;
+            border-top-right-radius: 30px;
+            position: absolute;
+        }
+
+        .container-5 {
+            position: absolute;
+            width: 100px;
+            padding-left: 920px;
+        }
+
+        .container-6 {
+            color: #ffffff;
+            font-size: xx-large;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-left: 100px;
+        }
+
+        .container-7 {
+            display: flex;
+        }
+
+        .container-8 {
+            border: 2px solid black;
+            margin: 100px;
+        }
+
+        .container-9 {
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container-10 {
+            font-size: xx-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px;
+            color: #464646;
+            width: 600px;
+        }
+
+        .container-11 {
+            border: 2px solid transparent;
+            background-color: orangered;
+            font-size: xx-large;
+            color: #ffffff;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container-12 {
+            border: 2px solid black;
+            margin: 100px;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 640px;
+        }
+
+        .container-13 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <title>Bill</title>
+</head>
+
+<body>
+    <div class="container-1">
+        <img src="image1.png" class="container-2">
+        <input type="text" name="text" class="container-3" placeholder="Which Chair You Want">
+        <img src="image2.png" class="container-4">
+        <img src="image3.png" class="container-5">
+        <p class="container-6"><a href="log.html" class="container-6">Log In / Register</a></p>
+    </div>
+    <div class="container-7">
+        <div class="container-8">
+            <h1 class="container-9">Check Out</h1>
+            <input type="text" name="text" class="container-10" placeholder="Enter Your Name:">
+            <br>
+            <input type="text" name="text" class="container-10" placeholder="Enter Your Phone Number:">
+            <br>
+            <input type="text" name="text" class="container-10" id="quan"
+                placeholder="Enter The Qunantity Which You Want:">
+            <br>
+            <input type="text" name="text" class="container-10" placeholder="Enter Your Address:">
+            <br>
+            <input type="text" name="text" id="coupon" placeholder="Enter The Coupon Code:" class="container-10">
+            <button onclick="out()" class="container-11">Check Out</button>
+        </div>
+        <div class="container-12">
+            <h1 class="container-13">Total Bill</h1>
+            <h1 id="cost"></h1>
+            <h1 id="qunantity"></h1>
+            <h1 id="gst"></h1>
+            <h1 id="total"></h1>
+            <h1 id="dis"></h1>
+            <h1 id="grand"></h1>
+        </div>
+    </div>
+</body>
+<script>
+    function out() {
+        var x = parseInt(document.getElementById("quan").value);
+        var y = document.getElementById("coupon").value;
+        var sum = 13 * x;
+        if (y == "NIL500") {
+            var gst = (18 * sum) / 100;
+            var total = sum + gst;
+            var dis = (25 * total) / 100;
+            var grand = total - dis;
+            document.getElementById("cost").innerHTML = "The Cost Of One Chsir Is $10";
+            document.getElementById("qunantity").innerHTML = "The Qunantity Of Chair Is " + x;
+            document.getElementById("gst").innerHTML = "The GST Is $" + gst;
+            document.getElementById("total").innerHTML = "The Total Is $" + total;
+            document.getElementById("dis").innerHTML = "The Discount Of $" + dis;
+            document.getElementById("grand").innerHTML = "The Grand Total Is $" + grand;
+        }
+        else {
+            var gst = (18 * sum) / 100;
+            var total = sum + gst;
+            var dis = (15 * total) / 100;
+            var grand = total - dis;
+            document.getElementById("cost").innerHTML = "The Cost Of One Chsir Is $10";
+            document.getElementById("qunantity").innerHTML = "The Qunantity Of Chair Is " + x;
+            document.getElementById("gst").innerHTML = "The GST Is $" + gst;
+            document.getElementById("total").innerHTML = "The Total Is $" + total;
+            document.getElementById("dis").innerHTML = "The Discount Of $" + dis;
+            document.getElementById("grand").innerHTML = "The Grand Total Is $" + grand;
+        }
+    }
+</script>
+
+</html>

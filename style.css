@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #afeeee;
+}
+
+.container-1 {
+    display: flex;
+    background-color: #102030;
+}
+
+.container-2 {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    width: 70px;
+    position: absolute;
+}
+
+.container-3 {
+    position: relative;
+    border: 2px solid #ffffff;
+    font-weight: bold;
+    width: 700px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 170px;
+    margin-top: 30px;
+    font-size: xx-large;
+    height: 35px;
+    border-radius: 50px;
+}
+
+.container-4 {
+    padding-top: 30px;
+    height: 40px;
+    padding-left: 820px;
+    border-top-right-radius: 30px;
+    position: absolute;
+}
+.container-5{
+    position: absolute;
+    width: 100px;
+    padding-left: 920px;
+}
+.container-6{
+    color: #ffffff;
+    font-size: xx-large;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 100px;    
+}
+.container-6:hover{
+    color: black;
+    transition: 1s;
+}
+.container-6:active{
+    color:saddlebrown;
+}
+.container-7{
+    margin-top: 20px;
+    display: flex;
+}
+.container-8{
+    border: 2px solid transparent;
+    width: 350px;
+    background-color: #ffffff;
+    height: auto;
+    margin-left: 23px;
+    box-shadow: 5px 5px 10px;
+}
+.container-9{
+    width: 350px;
+}
+.container-10{
+    color: #102030;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.container-11{
+    color: #ffffff;
+    background-color: #102030;
+
+    margin: 10px;
+    border: 2px solid transparent;
+}
+.container-11:active{
+    transition: 1s;
+    background-color: #ffffff;
+}
+
+.container-12{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container-12:hover{
+    color: #afeeee;
+    transition: 1s;
+}
+.container-12:active{
+    transition: 1s;
+    color: #102030  ;
+}
